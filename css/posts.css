@@ -4,7 +4,6 @@
 .entries {
     position:relative;
     z-index:200;
-    width:calc({text:post size} + 50px);
     height:auto;
 }
 
@@ -12,10 +11,7 @@
 
 .post {
     position:relative;
-    width:{text:post size};
     margin:50px auto;
-    background-color:{color:posts};
-    border:1px solid {color:border};
     border-radius:5px;
 }
 
@@ -31,7 +27,6 @@
     z-index:2;
     margin:0px;
     padding:20px;
-    border-bottom:1px solid {color:border};
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -56,25 +51,21 @@
     a.post-top-date {
         font-weight:400;
         font-family:'Inconsolata', monospace;
-        color:rgba({RGBcolor:text},0.8);
         text-transform:lowercase;
     }
     
     .pinned {
         position:relative;
         padding:20px;
-        border-bottom:1px solid {color:border};
         display:flex;
         align-items:center;
         gap:10px;
-        color:{color:accent};
     }
     
         .pinned .ti {
             font-size:15px;
             width:15px!important;
             height:15px!important;
-            color:{color:accent};
         }
         
 
@@ -90,18 +81,9 @@
     font-weight:600;
     box-sizing:border-box;
 }
-    
-    .title a, .more a {
-        border-bottom:1px solid {color:border};
-    }
-    
-        .title a:hover, .more a:hover {
-            border-bottom:1px solid {color:accent};
-        }
 
 .more a {
     font-size:1.2em;
-    color:{color:text};
     font-weight:bold;
 }
 
@@ -165,7 +147,6 @@
         display:flex;
         flex-wrap:wrap;
         gap:10px;
-        border-top:1px solid {color:border};
         padding:20px 20px 0px 20px;
     }
     
@@ -203,9 +184,6 @@ img.tumblr_avatar {
     align-items:center;
     font-weight:600;
 }
-
-    .tumblr_blog a:hover, a.tumblr_blog:hover {color:{color:accent};}
-    .tumblr_blog a:not([href]):hover {color:{color:text};}
     
     .tumblr_blog .ti {color:#50e7e7; position:relative;}
     .tumblr_blog .ti:after {content:'\ea5e'; font-family:tabler-icons; display:block; color:#fff; position:absolute;
@@ -231,25 +209,19 @@ img.tumblr_avatar {
     display:block;
 }
 
-.photo-p img {width:{text:post size};}
 
 .photo-slideshow img {
     border-radius:0px;
 }
 
-video, .video, .video iframe {
-    width:{text:post size};
-}
 
 .tumblr_video_container {
     display:block;
-    width:{text:post size};
     margin:0px -20px -20px -20px;
     padding-top:3px;
     grid-gap: 3px;
     border-radius:0px 0px 14px 14px;
     overflow:hidden;
-    background-color:{color:background};
 }
 
 [photoset-layout] {
@@ -338,10 +310,8 @@ figure.tmblr-full {
 
     .source a,
     .source a.tumblr_blog {
-        width:auto; height:auto;
-        border-bottom:2px solid {color:accent};}
+        width:auto; height:auto;}
         
-    .source a:hover {border-bottom:2px solid {color:border};}
         
 /* --- links --- */
 
@@ -352,7 +322,6 @@ figure.tmblr-full {
     margin-right:20px;
     margin-bottom:20px;
     margin-left:20px;
-    border:1px solid {color:border};
     border-radius:5px;
     overflow:hidden;
 }
@@ -372,7 +341,6 @@ div.npf-link-block.no-poster .title {
     align-items:center;
     justify-content:center;
     text-align:center;
-    border-bottom:1px solid {color:border};
     box-sizing:border-box;
     padding:20px;
 }
@@ -395,7 +363,6 @@ div.npf-link-block.no-poster .title {
     div.npf-link-block .poster .title,
     div.npf-link-block.no-poster .title {
         z-index:10;
-        color:{color:posts};
         font-weight:600;
         font-size:1.5em;
         position:relative;
@@ -428,13 +395,11 @@ div.npf-link-block .bottom {
     .link-url {
         font-size:0.85em;
         text-transform:uppercase;
-        color:rgba({RGBcolor:text},0.65);
     }
     
 div.npf-link-block {
     width:100%;
     border-radius:5px;
-    border:1px solid {color:border};
     margin:0px;
 }
 
@@ -498,7 +463,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
                 width:15px;
                 height:15px;
                 border-radius:30px;
-                background-color:{color:posts};
                 outline:1px solid rgba(0,0,0,0.2);
                 outline-offset:7px;
             }
@@ -580,7 +544,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
 .seekbar {
 	width:100%;
 	height:10px;
-	background:{color:border};
 	border-radius:10px;
 	box-shadow: rgb(78, 78, 78, 0.1) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 	overflow:hidden;
@@ -589,7 +552,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
 .seekbar_progress {
 	width:0;
 	height:100%;
-	background:{color:accent};
 	border-radius:5px;
 }
 
@@ -605,7 +567,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
     width:40px;
     height:40px;
     border-radius:40px;
-    background-color:{color:accent};
     display:flex;
     align-items:center;
     justify-content:center;
@@ -614,7 +575,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
 }
 
     .audio_buttons .ti {
-        color:{color:posts};
         font-size:20px;
         width:20px;
         height:20px;
@@ -631,7 +591,6 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
         
 iframe.spotify_audio_player,
 iframe.soundcloud_audio_player {
-    width:calc({text:post size} - 40px);
     height:80px;
     margin:0px 20px;
 }
@@ -644,9 +603,6 @@ iframe.soundcloud_audio_player {
     display:flex;
     align-items:flex-end;
 }
-        .answer-c blockquote {
-            border-left:1px solid {color:posts};
-        }
 
     .question-img, .answer-img {
         position:relative;
@@ -712,7 +668,6 @@ iframe.soundcloud_audio_player {
         .answer-asker a {
             font-weight:700;
             text-transform:lowercase;
-            color:{color:accent};
             width:100%;
         }
         
@@ -721,15 +676,10 @@ iframe.soundcloud_audio_player {
             width:100%;
         }
         
-        .question-asker a:hover,
-        .answer-asker a:hover {
-            color:{color:accent};
-        }
     
     .question-content,
     .answer-content {
         position:relative;
-        background-color:rgba({RGBcolor:border},0.75);
         border-radius:8px;
         padding:20px;
         margin-top:15px;
@@ -743,7 +693,6 @@ iframe.soundcloud_audio_player {
             top:-7.5px;
             width:15px;
             height:15px;
-            background-color:rgba({RGBcolor:border},0.75);
             transform:rotate(45deg);
             border-radius:3px 0px 0px 0px;
             clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -790,7 +739,6 @@ p.npf_chat {
     margin:0px;
     padding:20px;
     width:calc(100% - 40px);
-    border-top:1px solid {color:border};
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -803,9 +751,6 @@ p.npf_chat {
         align-items:center;
     }
     
-        .post-date a:hover {
-            color:{color:accent};
-        }
     
     .post-date i {
         font-size:20px;
@@ -835,11 +780,9 @@ p.npf_chat {
     
     .date-right a:last-of-type {margin-left:10px;}
     
-    .date-right .like .liked + svg {opacity:1;stroke:{color:accent};}
-    .date-right .like .liked + svg path {fill:{color:accent};}
     .date-right .like .like_button {position:relative; height:21px;}
     
-    .date-right .like .liked:after {content:'\f67c'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px; color:{color:accent};}
+    .date-right .like .liked:after {content:'\f67c'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px;}
     .date-right .like .liked + i {display:none;}
     
     .date-right .like .like_button iframe {
@@ -860,13 +803,7 @@ p.npf_chat {
             display:inline;
             margin-left:0px;
             font-weight:600;
-            border-bottom:1px solid {color:border};
         }
-        
-            .date-perma a:hover {
-                color:{color:text};
-                border-bottom:1px solid {color:accent};
-            }
 
 /* --- tags --- */
 
@@ -882,7 +819,6 @@ p.npf_chat {
 }
 
     .tags-c i {
-        color:rgba({RGBcolor:text},0.7);
         font-size:16px;
         height:16px; height:16px;
         margin-right:5px;
@@ -895,23 +831,13 @@ p.npf_chat {
  
     a.tags {
         display:inline-block;
-        color:rgba({RGBcolor:text},0.7);
     }
-    
-        a.tags:hover {
-            color:rgba({RGBcolor:text},1);
-        }
 
 /* --- notes --- */
 
 .pagenotes {
-    {block:IndexPage}
-    display: none!important;
-    {/block:IndexPage}
     position:relative;
-    width:{text:post size};
     margin:0px 31px 80px auto;
-    background-color:rgba({RGBcolor:posts},0.5);
     backdrop-filter:blur(3px);
     padding:5px 20px;
     box-sizing:border-box;
@@ -976,7 +902,6 @@ p.npf_chat {
             color:#f2f2f2;
             border-radius:15px;
             font-size:12px;
-            border:1px solid {color:posts};
             display:flex;
             align-items:center;
             justify-content:center;
@@ -1028,8 +953,6 @@ p.npf_chat {
         display:flex;
         justify-content:space-between;
         align-items:center;
-        background-color:{color:posts};
-        border:1px solid {color:border};
         border-radius:5px;
         padding:20px;
     }
@@ -1038,15 +961,6 @@ p.npf_chat {
             font-size:20px;
             width:20px;
             height:20px;
-        }
-        
-        .pagination a:hover {
-            background-color:{color:accent};
-            color:{color:posts};
-        }
-        
-        .pagination a:hover i {
-            color:{color:posts};
         }
     
 /* --- credit / do not edit --- */
