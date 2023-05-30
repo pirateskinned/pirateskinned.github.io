@@ -10,6 +10,7 @@
 /* --- posts --- */
 
 .post {
+	width:var(--post-size);
     position:relative;
     margin:0px auto 80px auto;
     border-radius:5px;
