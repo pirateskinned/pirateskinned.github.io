@@ -37,7 +37,7 @@
 
     .post-top-reblogger {
         font-weight:700;
-        width:100%;
+        width:calc(100% - 20px);
         display:flex;
         align-items:center;
         gap:10px;
@@ -48,6 +48,12 @@
             width:14px;
             height:14px;
         }
+
+.post-top-icon .ti {
+	font-size:20px;
+	width:20px;
+	height:20px;
+}
     
     a.post-top-date {
         font-weight:400;
