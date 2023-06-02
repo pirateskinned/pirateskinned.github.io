@@ -661,7 +661,7 @@ p.npf_chat {
 
 .pagenotes {
     position:relative;
-    margin:0px auto;
+    margin:0px auto 50px auto;
     padding:5px 20px;
     box-sizing:border-box;
     border-radius:5px;
