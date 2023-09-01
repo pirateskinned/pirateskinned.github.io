@@ -12,8 +12,6 @@
 .post {
 	width:var(--post-size);
     position:relative;
-    margin:0px auto 80px auto;
-    border-radius:5px;
 }
 
     .post img:not([photoset-layout] img, .photoset-grid img) {
@@ -661,10 +659,6 @@ p.npf_chat {
 
 .pagenotes {
     position:relative;
-    margin:0px auto 50px auto;
-    padding:5px 20px;
-    box-sizing:border-box;
-    border-radius:5px;
 }
 
     .pagenotes img {
