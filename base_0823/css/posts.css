@@ -685,8 +685,8 @@ p.npf_chat {
     .pagenotes ol {
         list-style-type:none;
         margin:0px;
-        padding:0px;
-        
+        padding:5px 20px;
+        width:calc(100% - 40px);
     }
     
     .pagenotes ol li {
