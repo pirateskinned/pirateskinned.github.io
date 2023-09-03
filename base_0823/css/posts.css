@@ -195,7 +195,7 @@ img.tumblr_avatar {
         top:5px; left:5px; font-size:8px;
     }
     
-    .caption > hr + .tumblr_blog:first-child {padding:20px 20px 0px 20px;}
+    .caption > hr + .tumblr_blog {padding:0px 20px;}
     .caption-inner > .tumblr_blog, .caption-inner-reblogs > .tumblr_blog {margin-bottom:10px;}
 
 .deactivated {
