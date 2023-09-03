@@ -601,7 +601,8 @@ p.npf_chat {
     .date-right a:last-of-type {margin-left:10px;}
     
     .date-right .like .like_button {position:relative; height:21px;}
-    
+
+    .date-right .like .liked:before {content:'\eabe'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px; color:red;}
     .date-right .like .liked:after {content:'\f67c'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px;}
     .date-right .like .liked + i {display:none;}
     
