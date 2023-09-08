@@ -5,13 +5,45 @@
     position:relative;
     z-index:200;
     height:auto;
+    width:calc(var(--post-size) + 2px + 20px + 60px);
 }
 
 /* --- posts --- */
 
-.post {
-	width:var(--post-size);
+article {
     position:relative;
+    width:calc(var(--post-size) + 2px + 20px + 60px);
+    margin:0px 0px 80px 0px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.post-icon {
+    width:60px;
+    height:60px;
+    margin-top:11px;
+    border-radius:8px;
+    box-shadow:inset 0px 0px 5px rgba(0,0,0,0.05), 0px 0px 5px rgba(0,0,0,0.05);
+    overflow:hidden;
+    background:var(--posts);
+}
+
+    .post-icon img {
+        width:60px;
+        height:60px;
+    }
+
+.post {
+    position:relative;
+    width:var(--post-size);
+    background-color:var(--posts);
+    border:1px solid var(--border);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.05);
+    border-radius:10px;
+    
 }
 
     .post img:not([photoset-layout] img, .photoset-grid img) {
@@ -19,7 +51,6 @@
         height:auto;
         display:block;
     }
-    
     
 .post-top {
     position:relative;
@@ -54,6 +85,7 @@
 }
     
     a.post-top-date {
+        color:rgba(var(--rgb-text),0.8);
         font-weight:400;
         font-family:'Inconsolata', monospace;
         text-transform:lowercase;
@@ -62,6 +94,8 @@
     .pinned {
         position:relative;
         padding:20px;
+        border-bottom:1px solid var(--border);
+        color:var(--accent);
         display:flex;
         align-items:center;
         gap:10px;
@@ -71,6 +105,7 @@
             font-size:15px;
             width:15px!important;
             height:15px!important;
+            color:var(--accent);
         }
         
 
@@ -189,11 +224,8 @@ img.tumblr_avatar {
     align-items:center;
     font-weight:600;
 }
-    
-    .tumblr_blog .ti {color:#50e7e7; position:relative;}
-    .tumblr_blog .ti:after {content:'\ea5e'; font-family:tabler-icons; display:block; color:#fff; position:absolute;
-        top:5px; left:5px; font-size:8px;
-    }
+
+
     
     .caption > hr + .tumblr_blog {padding:0px 20px;}
     .caption-inner > .tumblr_blog, .caption-inner-reblogs > .tumblr_blog {margin-bottom:10px;}
