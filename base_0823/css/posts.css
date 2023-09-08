@@ -107,8 +107,6 @@ article {
             height:15px!important;
             color:var(--accent);
         }
-        
-
 
 /* --- text posts --- */
 
@@ -122,29 +120,35 @@ article {
     box-sizing:border-box;
 }
 
+.caption > .title:first-child {padding:20px 20px 0px 20px;}
+.title + .tumblr_blog {padding:0px 20px 0px 20px;}
+
 .more a {
     font-size:1.2em;
     font-weight:bold;
+	color:var(--text);
 }
 
-.txt {
-    margin:0px;
-    padding:0px;
+    .title a, .more a {
+        border-bottom:1px solid var(--border);
+    }
+
+.title a:hover, .more a:hover {
+            border-bottom:1px solid var(--accent);
+        }
+
+.poll-post a.poll-row {
+    width:calc(var(--post-size) - 40px);
+    font-weight:400;
+    border-radius:5px;
+    background-color:var(--background);
+    border:1px solid var(--border);
 }
 
+    .poll-post a.poll-row:hover {
+        background-color:var(--accent);
+    }
 
-    .txt:first-of-type {
-        padding:0px;
-    } 
-    
-    .txt img {
-        border-radius:0px;
-    }
-    
-    .photo-origin img {
-        border-radius:0px;
-    }
-    
 .caption {
     overflow:hidden;
     display:flex;
@@ -188,6 +192,7 @@ article {
         flex-wrap:wrap;
         gap:10px;
         padding:20px 20px 0px 20px;
+	    border-top:1px solid var(--border);
     }
     
     .caption-inner-reblogs:last-of-type {
@@ -225,10 +230,13 @@ img.tumblr_avatar {
     font-weight:600;
 }
 
-
+p .tumblr_blog {display:initial;}
     
     .caption > hr + .tumblr_blog {padding:0px 20px;}
     .caption-inner > .tumblr_blog, .caption-inner-reblogs > .tumblr_blog {margin-bottom:10px;}
+
+.tumblr_blog a:hover, a.tumblr_blog:hover {color:var(--accent);}
+    .tumblr_blog a:not([href]):hover {color:var(--text);}
 
 .deactivated {
     font-weight:600;
@@ -246,6 +254,7 @@ img.tumblr_avatar {
     display:block;
 }
 
+.photo-p img {width:var(--post-size);}
 
 .photo-slideshow img {
     border-radius:0px;
@@ -305,6 +314,35 @@ figure.tmblr-full {
 
 
 
+video, .video, .video iframe {
+    width:var(--post-size);
+    margin-left:0px;
+}
+
+.tumblr_video_container {
+    width:var(--post-size);
+    background-color:var(--background);
+}
+
+figure.tmblr-embed {
+    width:var(--post-size);
+    margin:0px -20px;
+}
+
+.soundcloud_audio_player {
+    max-height:116px!important;
+}
+
+.spotify_audio_player {
+    max-height:80px!important;
+}
+
+.tmblr-full>video {
+    margin:0px -20px;
+    width:calc(100% + 40px);
+}
+
+.tmblr-embed>iframe {width:100%;height:150%;}
 
 
 /* --- quotes --- */
@@ -337,8 +375,10 @@ figure.tmblr-full {
 
     .source a,
     .source a.tumblr_blog {
-        width:auto; height:auto;}
+        width:auto; height:auto;
+        border-bottom:2px solid var(--accent);}
         
+    .source a:hover {border-bottom:2px solid var(--border);}
         
 /* --- links --- */
 
@@ -351,6 +391,7 @@ figure.tmblr-full {
     margin-left:20px;
     border-radius:5px;
     overflow:hidden;
+	border:1px solid var(--border);
 }
 
 .link-p + .caption-inner {margin-top:-20px;}
@@ -370,6 +411,7 @@ div.npf-link-block.no-poster .title {
     text-align:center;
     box-sizing:border-box;
     padding:20px;
+	border-bottom:1px solid var(--border);
 }
 
     .link-thumbnail:before,
@@ -393,6 +435,7 @@ div.npf-link-block.no-poster .title {
         font-weight:600;
         font-size:1.5em;
         position:relative;
+	    color:var(--posts);
     }
     
 div.npf-link-block .poster {
@@ -422,12 +465,14 @@ div.npf-link-block .bottom {
     .link-url {
         font-size:0.85em;
         text-transform:uppercase;
+	    color:rgba(var(--rgb-text),0.65);
     }
     
 div.npf-link-block {
     width:100%;
     border-radius:5px;
     margin:0px;
+	border:1px solid var(--border);
 }
 
 div.npf-link-block .title {
@@ -436,7 +481,148 @@ div.npf-link-block .title {
 
 div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
 
+/* --- audio --- */
 
+.tmblr-full>.audio-caption .album, .tmblr-full>.audio-caption .artist {
+    font-size:1em;
+    line-height:1.5em;
+}
+        
+.audio_buttons {
+    background-color:var(--accent);
+}
+
+    .audio_buttons .ti {
+        color:var(--posts);
+    }
+iframe.spotify_audio_player,
+iframe.soundcloud_audio_player {
+    width:calc(var(--post-size) - 40px)!important;
+}
+
+.audio {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px 0px;
+    margin-bottom:20px;
+}
+
+    .tmblr-full>.audio-caption {
+        gap:20px;
+        flex-direction:row-reverse;
+    }
+
+    .audio-cover,
+    .tmblr-full>.audio-caption .album-cover {
+        position:relative;
+        width:140px;
+        height:140px;
+        border-radius:5px;
+        border:1px solid var(--border);
+        background-size:cover;
+        background-position:center center;
+    }
+    
+    .audio-cover {margin-left:20px;}
+    
+    .audio-text,
+    .tmblr-full>.audio-caption .audio-details {
+        width:calc(100% - 180px);
+        box-sizing:border-box;
+        padding:0px 20px 0px 0px;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+    }
+    
+        .audio-text-song, .audio-text-artist, .audio-text-album,
+        .tmblr-full>.audio-caption .album, .tmblr-full>.audio-caption .artist {
+            position:relative;
+            width:100%;
+            height:auto;
+        }
+    
+        .audio-text-song,
+        .tmblr-full>.audio-caption .title {
+            font-size:1.2em;
+            font-weight:600;
+            padding:0px;
+        }
+    
+    .audio_player {
+        width:100%;
+        box-sizing:border-box;
+        padding:0px 20px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+    }
+        
+        .audio_player-time {
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+        
+.seekbar {
+	width:100%;
+	height:5px;
+	border-radius:5px;
+	overflow:hidden;
+	border:1px solid var(--border);
+}
+
+.seekbar_progress {
+	width:0;
+	height:100%;
+	background-color:var(--accent);
+}
+
+.audio_player-buttons {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+}
+
+.audio_buttons {
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0px 0px 5px rgba(78,78,78,0.1);
+}
+
+    .audio_buttons .ti {
+        font-size:20px;
+        width:20px;
+        height:20px;
+    }
+    
+    .audio_buttons .play_button,
+    .audio_buttons .pause_button {
+        width:20px;
+        height:20px;
+    }
+    
+    .tmblr-full>audio {
+        margin-top:20px;
+        width:100%;
+    }
+    
+.audio + .caption-inner {margin-top:-20px;}
+.audio:has(+ .caption-inner-reblogs):not(:has(+ .caption-inner)) {margin-bottom:0px;}
+        
 
 /* --- asks --- */
 
@@ -465,6 +651,12 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
             width:40px;
             height:40px;
             border-radius:8px;
+        }
+
+	.answer-c blockquote {
+            margin:0px;
+            padding:0px 0px 0px 15px;
+            width:auto;
         }
         
     .question {
@@ -517,7 +709,11 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
         .answer-asker span {
             width:100%;
         }
-        
+
+	.question-asker a:hover,
+        .answer-asker a:hover {
+            color:var(--accent);
+        }
     
     .question-content,
     .answer-content {
@@ -525,6 +721,7 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
         border-radius:8px;
         padding:20px;
         margin-top:15px;
+	    background-color:rgba(var(--rgb-text),0.05);
     }
     
         .question-content:before,
@@ -538,6 +735,7 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
             transform:rotate(45deg);
             border-radius:3px 0px 0px 0px;
             clip-path: polygon(0 0, 0% 100%, 100% 0);
+		background-color:rgba(var(--rgb-text),0.05);
         }
         
         .question-content:before {left:30.5px;}
@@ -572,6 +770,14 @@ div.npf-link-block .bottom .site-name {width:100%; margin:0px;}
 p.npf_chat {
     font-family:'Inconsolata', monospace;
 }
+
+/* --- submissions --- */
+        
+.submitted {
+    width:calc(100% - 40px);
+    padding:20px 20px 0px 20px;
+    border-top:1px solid var(--border);
+}
     
 /* --- post info --- */
 
@@ -592,7 +798,10 @@ p.npf_chat {
         display:flex;
         align-items:center;
     }
-    
+
+	.post-date a:hover {
+            color:var(--accent);
+        }
     
     .post-date i {
         font-size:20px;
@@ -624,10 +833,15 @@ p.npf_chat {
     
     .date-right .like .like_button {position:relative; height:21px;}
 
+    .date-right .like .liked + svg {stroke:var(--text);}
+    .date-right .like .liked + svg path {fill:var(--accent);stroke:var(--text);}
+
     .date-right .like .liked:before {content:'\eabe'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px; color:var(--text); position:absolute;}
-    .date-right .like .liked:after {content:'\f67c'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px;}
+    .date-right .like .liked:after {content:'\f67c'; font-family:tabler-icons; display:block; font-size:20px; width:20px; height:20px; color:var(--accent);}
     .date-right .like .liked + i {display:none;}
     
+    #like.liked svg {fill:var(--accent);stroke:var(--text);}
+
     .date-right .like .like_button iframe {
         position:absolute;
         top:0px;
@@ -637,9 +851,12 @@ p.npf_chat {
         z-index:2;
         opacity:0;
     }
-    
+   
     .date-perma {
         width:100%;
+	display:flex;
+        flex-wrap:wrap;
+        gap:10px;
     }
     
         .date-perma a {
@@ -647,6 +864,34 @@ p.npf_chat {
             margin-left:0px;
             font-weight:600;
         }
+
+	.date-perma a:hover {
+                color:var(--accent);
+            }
+
+            .date-perma-blocks:first-of-type {
+                border-top:1px solid var(--border);
+                padding-top:20px;
+            }
+            
+            .date-perma-blocks:last-of-type {
+                padding-bottom:20px;
+            }
+            
+            .date-perma-blocks {
+                width:100%;
+                box-sizing:border-box;
+                padding-right:20px;
+                padding-left:20px;
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+                gap:10px;
+            }
+            
+            .date-perma-blocks i {
+                font-style:normal;
+            }
 
 /* --- tags --- */
 
@@ -665,6 +910,7 @@ p.npf_chat {
         font-size:16px;
         height:16px; height:16px;
         margin-right:5px;
+	    color:rgba(var(--rgb-text),0.7);
     }
 
 .tags {
@@ -674,13 +920,29 @@ p.npf_chat {
  
     a.tags {
         display:inline-block;
+	color:rgba(var(--rgb-text),0.7);
     }
+
+	a.tags:hover {
+            color:rgba(var(--rgb-text),1);
+        }
 
 /* --- notes --- */
 
 .pagenotes {
     position:relative;
+    width:var(--post-size);
+    background-color:var(--posts);
+    border:1px solid var(--border);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.05);
+    border-radius:10px;
 }
+
+    .pagenotes h1 {
+        border-bottom:1px solid var(--border);
+        width:calc(100% - 40px);
+        padding:20px;
+    }
 
     .pagenotes img {
         border-radius:20px;
@@ -742,6 +1004,7 @@ p.npf_chat {
             display:flex;
             align-items:center;
             justify-content:center;
+	    border:1px solid var(--posts);
         }
         
         .pagenotes .like::before {
