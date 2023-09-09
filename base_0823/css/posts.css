@@ -899,19 +899,7 @@ p.npf_chat {
     position:relative;
     width:100%;
     margin:10px 0px 0px 0px;
-    box-sizing:border-box;
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
 }
-
-    .tags-c i {
-        font-size:16px;
-        height:16px; height:16px;
-        margin-right:5px;
-	    color:rgba(var(--rgb-text),0.7);
-    }
 
 .tags {
     font-weight:400;
@@ -919,7 +907,7 @@ p.npf_chat {
 }
  
     a.tags {
-        display:inline-block;
+        display:inline;
 	color:rgba(var(--rgb-text),0.7);
     }
 
