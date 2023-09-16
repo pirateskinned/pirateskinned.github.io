@@ -1,5 +1,7 @@
 h2 {width:100%;}
 
+ul ul, ol ol, ul ol, ol ul {width:calc(100% - 35px);}
+
 /* --- entries --- */
 
 .entries {
