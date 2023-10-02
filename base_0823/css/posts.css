@@ -1,6 +1,3 @@
-h2 {width:100%;}
-
-ul ul, ol ol, ul ol, ol ul {width:calc(100% - 35px);}
 
 /* --- entries --- */
 
@@ -240,6 +237,7 @@ p .tumblr_blog {display:initial;}
 
 .tumblr_blog a:hover, a.tumblr_blog:hover {color:var(--accent);}
     .tumblr_blog a:not([href]):hover {color:var(--text);}
+.tumblr_blog i {font-style:normal;}
 
 .deactivated {
     font-weight:600;
